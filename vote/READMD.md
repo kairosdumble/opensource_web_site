@@ -20,4 +20,5 @@ views.py:전반적인 화면 전환과 출력을 도와줍니다.
 admin : 관리자 화면에 대한 정보가 들어있습니다. 
 
 <실행방법>
-CMD창에 py manage.py runserver를 입력하면 됩니다.
+CMD에서는 docker run -p 8000:8000 django-vote을 실행한 후,
+브라우저에서 http://localhost:8000/polls(투표모드)또는http://localhost:8000/admin(관리자 모드)를 검색하면 된다.
