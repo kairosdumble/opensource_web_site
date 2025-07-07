@@ -1,0 +1,13 @@
+<h1>{{ question.question_text }}</h1>
+<p>{{ question.description }}</p>
+
+<form method="post" action="{% url 'polls:vote' question.id %}">
+  {% csrf_token %}
+  {% for i in "12345" %}
+    <button type="submit" name="score_value" value="{{ i }}">{{ i }}점</button><br>
+  {% endfor %}
+</form>
+
+{% if error_message %}
+  <p><strong>{{ error_message }}</strong></p>
+{% endif %}

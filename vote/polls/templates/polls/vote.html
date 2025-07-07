@@ -1,0 +1,13 @@
+<h1>{{ question.question_text }} 평가 결과</h1>
+
+<p><strong>총점:</strong> {{ total_score }}점</p>
+<p><strong>평균 점수:</strong> {{ avg_score }}점 ({{ total_votes }}명 참여)</p>
+
+<h2>점수 분포</h2>
+<ul>
+  {% for score in score_stats %}
+    <li>{{ score.score_value }}점: {{ score.count }}명</li>
+  {% endfor %}
+</ul>
+
+<a href="{% url 'polls:index' %}">← 돌아가기</a>
